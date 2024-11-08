@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
 
-urlpatters = [
+urlpatterns = [
     path("user/", views.UserProfileListCreate.as_view(), name="UserProfileListCreate")
 ]
