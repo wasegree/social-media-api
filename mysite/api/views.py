@@ -9,3 +9,9 @@ from .serializers import UserProfileSerializer
 class UserProfileListCreate(generics.ListCreateAPIView):
     queryset = UserProfile.objects.all()
     serializer_class = UserProfileSerializer
+
+
+class UserProfileRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
+    queryset = UserProfile.objects.all()
+    serializer_class = UserProfileSerializer
+    lookup_field = "pk"
